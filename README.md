@@ -1,5 +1,12 @@
 # proj-6ix
 
+http://proj-6ix-health.herokuapp.com/
+
+- A full-stack application to manage SDC Forms authorized by Form Managers to be used for entry by Form Fillers during the pandemic to capture a given electronic medical report for patients
+- A parser that properly reads an SDC Cap formatted XML file and normalizes it into a data structure that we understand clearly in our domain.
+- Services to manage Patients, Form Fillers, Form Responses, and validation on Form Responses.
+
+
 ## Setup CI/CD using Github Actions
 - No setup required for `CI`.
 - Setting up `CD`:
