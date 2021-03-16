@@ -1,0 +1,505 @@
+{
+  "metadata": {
+    "Copyright": "(c) 2017 Cancer Care Ontario.  All rights reserved.",
+    "Approval": "CCO Cancer Imaging Program approved",
+    "GenericHeaderText": "High Risk Lung Cancer Screening Summary (Checklist)",
+    "OfficialName": "LDCT Lung Cancer Screening Reporting Template",
+    "Category": "Thoracic",
+    "Restrictions": "Protocol LDCT Lung Cancer Screening.",
+    "Required": true,
+    "CTV_Dkey": "",
+    "ChecklistCKey": "",
+    "VersionID": 1.1,
+    "CurrentFileName": "LDCT Lung Screening Pilot ver 1.1",
+    "ApprovalStatus": 0,
+    "EffectiveDate": "2017-02-24"
+  },
+  "SDCFormId": "FORM_LDCT_Lung",
+  "version": "1.0.0",
+  "title": "Lung Cancer Screening Template",
+  "body": {
+    "minRepetitions": 1,
+    "maxRepetitions": 1,
+    "sections": [
+      {
+        "title": "CLINICAL INFORMATION",
+        "minRepetitions": 1,
+        "maxRepetitions": 1,
+        "questions": [
+          {
+            "question": "Clinical Information:",
+            "questionId": "2",
+            "type": "ResponseQuestion",
+            "minRepetitions": 1,
+            "maxRepetitions": 1,
+            "isRequired": true,
+            "responseType": "string",
+            "defaultValue": "",
+            "minLength": 0,
+            "maxLength": 80,
+            "isParentQuestion": "false"
+          },
+          {
+            "isParentQuestion": "false",
+            "question": "Reason for exam:",
+            "questionId": "4",
+            "options": [
+              {
+                "optionId": "5",
+                "text": "Baseline scan",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              },
+              {
+                "optionId": "6",
+                "text": "12 month recall",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              },
+              {
+                "optionId": "7",
+                "text": "6 month follow-up",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              },
+              {
+                "optionId": "777777",
+                "text": "3 month follow-up",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              },
+              {
+                "optionId": "8",
+                "text": "Other follow-up",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              }
+            ],
+            "maxSelections": 1,
+            "minSelections": 1,
+            "type": "SelectQuestion",
+            "minRepetitions": 1,
+            "maxRepetitions": 1,
+            "isRequired": true
+          }
+        ]
+      },
+      {
+        "title": "COMPARISON STUDIES",
+        "minRepetitions": 1,
+        "maxRepetitions": 1,
+        "questions": [
+          {
+            "isParentQuestion": "false",
+            "question": "Comparison Study:",
+            "questionId": "11",
+            "options": [
+              {
+                "optionId": "12",
+                "text": "None Available",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              },
+              {
+                "optionId": "13",
+                "text": "Previous CT Exam:",
+                "isInitiallySelected": false,
+                "controlledQuestions": [
+                  {
+                    "question": "",
+                    "questionId": "14",
+                    "type": "ResponseQuestion",
+                    "minRepetitions": 1,
+                    "maxRepetitions": 1,
+                    "isRequired": true,
+                    "responseSuffix": "(dates)",
+                    "defaultValue": "",
+                    "responseType": "date",
+                    "isParentQuestion": "false"
+                  }
+                ],
+                "responseMode": "choice"
+              }
+            ],
+            "maxSelections": 1,
+            "minSelections": 1,
+            "type": "SelectQuestion",
+            "minRepetitions": 1,
+            "maxRepetitions": 1,
+            "isRequired": true
+          }
+        ]
+      },
+      {
+        "title": "Findings:",
+        "minRepetitions": 1,
+        "maxRepetitions": 1,
+        "questions": [
+          {
+            "isParentQuestion": "false",
+            "question": "Location:",
+            "questionId": "42",
+            "options": [
+              {
+                "optionId": "43",
+                "text": "Parenchymal",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              },
+              {
+                "optionId": "44",
+                "text": "Subpleural",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              },
+              {
+                "optionId": "45",
+                "text": "Fissural",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              }
+            ],
+            "maxSelections": 1,
+            "minSelections": 1,
+            "type": "SelectQuestion",
+            "minRepetitions": 1,
+            "maxRepetitions": 1,
+            "isRequired": true
+          },
+          {
+            "isParentQuestion": "false",
+            "question": "Attenuation:",
+            "questionId": "46",
+            "options": [
+              {
+                "optionId": "47",
+                "text": "Solid",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              },
+              {
+                "optionId": "51",
+                "text": "Part-solid",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              },
+              {
+                "optionId": "60",
+                "text": "Pure Ground Glass",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              }
+            ],
+            "maxSelections": 1,
+            "minSelections": 1,
+            "type": "SelectQuestion",
+            "minRepetitions": 1,
+            "maxRepetitions": 1,
+            "isRequired": true
+          },
+          {
+            "question": "Mean diameter:",
+            "questionId": "48",
+            "type": "ResponseQuestion",
+            "minRepetitions": 1,
+            "maxRepetitions": 1,
+            "isRequired": true,
+            "responseSuffix": "mm",
+            "responseType": "integer",
+            "defaultValue": "0",
+            "minIntValue": 0,
+            "maxIntValue": 0,
+            "isParentQuestion": "false"
+          },
+          {
+            "question": "+Length:",
+            "questionId": "49",
+            "type": "ResponseQuestion",
+            "minRepetitions": 1,
+            "maxRepetitions": 1,
+            "isRequired": true,
+            "responseSuffix": "mm",
+            "responseType": "integer",
+            "defaultValue": "0",
+            "minIntValue": 0,
+            "maxIntValue": 0,
+            "isParentQuestion": "false"
+          },
+          {
+            "question": "+Width:",
+            "questionId": "50",
+            "type": "ResponseQuestion",
+            "minRepetitions": 1,
+            "maxRepetitions": 1,
+            "isRequired": true,
+            "responseSuffix": "mm",
+            "responseType": "integer",
+            "defaultValue": "0",
+            "minIntValue": 0,
+            "maxIntValue": 0,
+            "isParentQuestion": "false"
+          },
+          {
+            "isParentQuestion": "false",
+            "question": "Margins:",
+            "questionId": "77",
+            "options": [
+              {
+                "optionId": "78",
+                "text": "Spiculated",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              },
+              {
+                "optionId": "79",
+                "text": "Smooth",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              },
+              {
+                "optionId": "80",
+                "text": "Lobulated",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              },
+              {
+                "optionId": "81",
+                "text": "Polygonal",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              },
+              {
+                "optionId": "82",
+                "text": "Halo",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              },
+              {
+                "optionId": "83",
+                "text": "Obscured",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              }
+            ],
+            "maxSelections": 1,
+            "minSelections": 1,
+            "type": "SelectQuestion",
+            "minRepetitions": 1,
+            "maxRepetitions": 1,
+            "isRequired": true
+          },
+          {
+            "isParentQuestion": "false",
+            "question": "Calcification:",
+            "questionId": "84",
+            "options": [
+              {
+                "optionId": "85",
+                "text": "None",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              },
+              {
+                "optionId": "86",
+                "text": "Benign Pattern",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              },
+              {
+                "optionId": "87",
+                "text": "Indeterminate",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              }
+            ],
+            "maxSelections": 1,
+            "minSelections": 1,
+            "type": "SelectQuestion",
+            "minRepetitions": 1,
+            "maxRepetitions": 1,
+            "isRequired": true
+          }
+        ]
+      },
+      {
+        "title": "IMPRESSIONS",
+        "minRepetitions": 1,
+        "maxRepetitions": 1,
+        "sections": [
+          {
+            "title": "Lung-Rads Version 1.1 Assessment Category:",
+            "minRepetitions": 1,
+            "maxRepetitions": 1,
+            "questions": [
+              {
+                "isParentQuestion": "false",
+                "question": "Lung-Rads Version 1.0 Assessment Category:",
+                "questionId": "115",
+                "options": [
+                  {
+                    "optionId": "116",
+                    "text": "0 - Additional lung cancer screening CT images and/or comparison to prior chest CT examinations is needed",
+                    "isInitiallySelected": false,
+                    "responseMode": "choice"
+                  },
+                  {
+                    "optionId": "117",
+                    "text": "1 - Continue annual screening with LDCT in 12 months",
+                    "isInitiallySelected": false,
+                    "responseMode": "choice"
+                  },
+                  {
+                    "optionId": "118",
+                    "text": "2 - Continue annual screening with LDCT in 12 months",
+                    "isInitiallySelected": false,
+                    "responseMode": "choice"
+                  },
+                  {
+                    "optionId": "119",
+                    "text": "3 - LDCT in 6 months",
+                    "isInitiallySelected": false,
+                    "responseMode": "choice"
+                  },
+                  {
+                    "optionId": "120",
+                    "text": "4A - LDCT in 3 months; PET/CT may be used when there is a = 8 mm solid component",
+                    "isInitiallySelected": false,
+                    "responseMode": "choice"
+                  },
+                  {
+                    "optionId": "121",
+                    "text": "4B - chest CT with or without contrast, PET/CT and/or tissue sampling depending on the *probability of malignancy and comorbidities. PET/CT may be used when there is a = 8 mm solid component",
+                    "isInitiallySelected": false,
+                    "responseMode": "choice"
+                  },
+                  {
+                    "optionId": "122",
+                    "text": "4X - chest CT with or without contrast, PET/CT and/or tissue sampling depending on the *probability of malignancy and comorbidities. PET/CT may be used when there is a = 8 mm solid component",
+                    "isInitiallySelected": false,
+                    "responseMode": "choice"
+                  }
+                ],
+                "maxSelections": 1,
+                "minSelections": 1,
+                "type": "SelectQuestion",
+                "minRepetitions": 1,
+                "maxRepetitions": 1,
+                "isRequired": true
+              }
+            ]
+          },
+          {
+            "title": "Actionable incidental Findings (S Modifier):",
+            "minRepetitions": 1,
+            "maxRepetitions": 1,
+            "questions": [
+              {
+                "isParentQuestion": "false",
+                "question": "Actionable incidental Findings:",
+                "questionId": "pendiing",
+                "options": [
+                  {
+                    "optionId": "2384098",
+                    "text": "Yes",
+                    "isInitiallySelected": false,
+                    "controlledQuestions": [
+                      {
+                        "question": "Actionable incidental Findings (reiterate incidental finding(s)):",
+                        "questionId": "394570923",
+                        "type": "ResponseQuestion",
+                        "minRepetitions": 1,
+                        "maxRepetitions": 1,
+                        "isRequired": true,
+                        "responseType": "string",
+                        "defaultValue": "",
+                        "minLength": 0,
+                        "maxLength": 80,
+                        "isParentQuestion": "false"
+                      },
+                      {
+                        "isParentQuestion": "false",
+                        "question": "Recommendation for follow-up:",
+                        "questionId": "39759",
+                        "options": [
+                          {
+                            "optionId": "39759.1",
+                            "text": "Refer to Family Doc",
+                            "isInitiallySelected": false,
+                            "responseMode": "choice"
+                          },
+                          {
+                            "optionId": "39759.2",
+                            "text": "Refer to Specialist",
+                            "isInitiallySelected": false,
+                            "responseMode": "choice"
+                          },
+                          {
+                            "optionId": "39759.3",
+                            "text": "Future Imaging",
+                            "isInitiallySelected": false,
+                            "responseMode": "choice"
+                          }
+                        ],
+                        "maxSelections": 1,
+                        "minSelections": 1,
+                        "type": "SelectQuestion",
+                        "minRepetitions": 1,
+                        "maxRepetitions": 1,
+                        "isRequired": true
+                      }
+                    ],
+                    "responseMode": "choice"
+                  },
+                  {
+                    "optionId": "59823098",
+                    "text": "No",
+                    "isInitiallySelected": false,
+                    "responseMode": "choice"
+                  }
+                ],
+                "maxSelections": 1,
+                "minSelections": 1,
+                "type": "SelectQuestion",
+                "minRepetitions": 1,
+                "maxRepetitions": 1,
+                "isRequired": true
+              }
+            ]
+          }
+        ],
+        "questions": [
+          {
+            "question": "Pulmonary nodule summary:",
+            "questionId": "112",
+            "type": "ResponseQuestion",
+            "minRepetitions": 1,
+            "maxRepetitions": 1,
+            "isRequired": true,
+            "responseType": "string",
+            "defaultValue": "",
+            "minLength": 0,
+            "maxLength": 80,
+            "isParentQuestion": "false"
+          },
+          {
+            "question": "+Other Comments",
+            "questionId": "129",
+            "type": "ResponseQuestion",
+            "minRepetitions": 1,
+            "maxRepetitions": 1,
+            "isRequired": true,
+            "responseType": "string",
+            "defaultValue": "",
+            "minLength": 0,
+            "maxLength": 80,
+            "isParentQuestion": "false"
+          }
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "DataElements": "+ Data elements preceded with this symbol are optional"
+  },
+  "diagnosticProcedureId": "LDCTLung"
+}

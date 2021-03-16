@@ -1,0 +1,22 @@
+name: Client Continuous Integration
+
+on:
+  push:
+    branches-ignore: [master] # there is another action for push on master
+
+defaults:
+  run:
+    working-directory: client
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      - run: npm ci
+      - run: npm run lint
+      - run: npm test
+      - run: npm run build

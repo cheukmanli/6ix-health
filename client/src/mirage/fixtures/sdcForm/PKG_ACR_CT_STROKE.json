@@ -1,0 +1,563 @@
+{
+  "metadata": {
+    "Copyright": "(c) 2018 College of American Pathologists.  All rights reserved.  License required for use.",
+    "GenericHeaderText": "CCO Radiology Synoptic Template",
+    "Category": "CNS",
+    "OfficialName": "CCO Synoptic Template for  Stroke",
+    "TemplateID": 358.1000043,
+    "Restrictions": "This template applies to CT scans for stroke",
+    "CAP_Required": true,
+    "AccreditationDate": "9/14/2018 12:00:00 AM",
+    "WebPostingDate": "9/14/2018 12:00:00 AM",
+    "ShortName": "CT_Stroke_CCO",
+    "ReleaseStatus": "DRAFT",
+    "AJCC_Version": 8
+  },
+  "SDCFormId": "CT_Stroke_CCO.358_1.0.0.DRAFT_sdcFDF",
+  "version": "1.0.0.DRAFT",
+  "title": "CCO Synoptic Template for  Stroke",
+  "body": {
+    "minRepetitions": 1,
+    "maxRepetitions": 1,
+    "sections": [
+      {
+        "title": "#This template describes a Common Data Element for CT Stroke by the American College of Radiologists",
+        "minRepetitions": 1,
+        "maxRepetitions": 1,
+        "questions": [
+          {
+            "isParentQuestion": "false",
+            "question": "",
+            "questionId": "76234.1000043",
+            "options": [
+              {
+                "optionId": "76235.1000043",
+                "text": "Adrenocortical neoplasm",
+                "isInitiallySelected": true,
+                "responseMode": "choice"
+              }
+            ],
+            "maxSelections": 1,
+            "minSelections": 1,
+            "type": "SelectQuestion",
+            "minRepetitions": 1,
+            "maxRepetitions": 1,
+            "isRequired": true
+          }
+        ]
+      },
+      {
+        "title": "Administrative & Identification Data",
+        "minRepetitions": 1,
+        "maxRepetitions": 1,
+        "questions": [
+          {
+            "question": "Report Date",
+            "questionId": "76219.1000043",
+            "type": "ResponseQuestion",
+            "minRepetitions": 1,
+            "maxRepetitions": 1,
+            "isRequired": true,
+            "responseType": "string",
+            "defaultValue": "",
+            "minLength": 0,
+            "maxLength": 80,
+            "isParentQuestion": "false"
+          },
+          {
+            "question": "Report completed by",
+            "questionId": "76413.1000043",
+            "type": "ResponseQuestion",
+            "minRepetitions": 1,
+            "maxRepetitions": 1,
+            "isRequired": true,
+            "responseType": "string",
+            "defaultValue": "",
+            "minLength": 0,
+            "maxLength": 80,
+            "isParentQuestion": "false"
+          },
+          {
+            "isParentQuestion": "false",
+            "question": "Procedure",
+            "questionId": "76325.1000043",
+            "options": [
+              {
+                "optionId": "76240.1000043",
+                "text": "LDCT",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              },
+              {
+                "optionId": "76239.1000043",
+                "text": "Other (specify)",
+                "isInitiallySelected": false,
+                "responseType": "string",
+                "defaultValue": "",
+                "minLength": 0,
+                "maxLength": 80,
+                "responseMode": "responseText",
+                "isRequired": true
+              }
+            ],
+            "maxSelections": 1,
+            "minSelections": 1,
+            "type": "SelectQuestion",
+            "minRepetitions": 1,
+            "maxRepetitions": 1,
+            "isRequired": true
+          }
+        ]
+      },
+      {
+        "title": "Findings",
+        "minRepetitions": 1,
+        "maxRepetitions": 1,
+        "questions": [
+          {
+            "isParentQuestion": "false",
+            "question": "Hyperacute signs",
+            "questionId": "77913.1000043",
+            "options": [
+              {
+                "optionId": "77914.1000043",
+                "text": "Yes",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              },
+              {
+                "optionId": "77915.1000043",
+                "text": "No",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              }
+            ],
+            "maxSelections": 1,
+            "minSelections": 1,
+            "type": "SelectQuestion",
+            "minRepetitions": 1,
+            "maxRepetitions": 1,
+            "isRequired": true
+          },
+          {
+            "isParentQuestion": "false",
+            "question": "Location",
+            "questionId": "77916.1000043",
+            "options": [
+              {
+                "optionId": "77918.1000043",
+                "text": "Right frontal",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              },
+              {
+                "optionId": "77917.1000043",
+                "text": "Temporal",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              },
+              {
+                "optionId": "77919.1000043",
+                "text": "parietal",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              }
+            ],
+            "maxSelections": 0,
+            "minSelections": 1,
+            "type": "SelectQuestion",
+            "minRepetitions": 1,
+            "maxRepetitions": 1,
+            "isRequired": true
+          },
+          {
+            "isParentQuestion": "false",
+            "question": "Vascular Territory",
+            "questionId": "77920.1000043",
+            "options": [
+              {
+                "optionId": "77921.1000043",
+                "text": "ACA",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              },
+              {
+                "optionId": "77922.1000043",
+                "text": "MCA",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              },
+              {
+                "optionId": "77923.1000043",
+                "text": "PCA",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              },
+              {
+                "optionId": "77924.1000043",
+                "text": "SCA",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              },
+              {
+                "optionId": "77925.1000043",
+                "text": "AICA",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              },
+              {
+                "optionId": "77926.1000043",
+                "text": "PICA",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              },
+              {
+                "optionId": "77927.1000043",
+                "text": "Basil perforator",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              },
+              {
+                "optionId": "77928.1000043",
+                "text": "Thalamoperforator",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              },
+              {
+                "optionId": "77929.1000043",
+                "text": "AntChoroidal",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              }
+            ],
+            "maxSelections": 1,
+            "minSelections": 1,
+            "type": "SelectQuestion",
+            "minRepetitions": 1,
+            "maxRepetitions": 1,
+            "isRequired": true
+          },
+          {
+            "isParentQuestion": "false",
+            "question": "Hemorrhagic conversion",
+            "questionId": "77930.1000043",
+            "options": [
+              {
+                "optionId": "77931.1000043",
+                "text": "Yes",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              },
+              {
+                "optionId": "77932.1000043",
+                "text": "No",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              }
+            ],
+            "maxSelections": 1,
+            "minSelections": 1,
+            "type": "SelectQuestion",
+            "minRepetitions": 1,
+            "maxRepetitions": 1,
+            "isRequired": true
+          },
+          {
+            "isParentQuestion": "false",
+            "question": "Mass effect",
+            "questionId": "77933.1000043",
+            "options": [
+              {
+                "optionId": "77934.1000043",
+                "text": "Yes",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              },
+              {
+                "optionId": "77935.1000043",
+                "text": "No",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              }
+            ],
+            "maxSelections": 1,
+            "minSelections": 1,
+            "type": "SelectQuestion",
+            "minRepetitions": 1,
+            "maxRepetitions": 1,
+            "isRequired": true
+          },
+          {
+            "isParentQuestion": "false",
+            "question": "Vascular Mechanism/Pattern",
+            "questionId": "77936.1000043",
+            "options": [
+              {
+                "optionId": "77937.1000043",
+                "text": "embolic",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              },
+              {
+                "optionId": "77938.1000043",
+                "text": "perforator",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              },
+              {
+                "optionId": "77939.1000043",
+                "text": "borderzone ischemia",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              }
+            ],
+            "maxSelections": 1,
+            "minSelections": 1,
+            "type": "SelectQuestion",
+            "minRepetitions": 1,
+            "maxRepetitions": 1,
+            "isRequired": true
+          },
+          {
+            "question": "Midlineshift in mm",
+            "questionId": "77940.1000043",
+            "type": "ResponseQuestion",
+            "minRepetitions": 1,
+            "maxRepetitions": 1,
+            "isRequired": true,
+            "responseType": "string",
+            "defaultValue": "",
+            "minLength": 0,
+            "maxLength": 80,
+            "isParentQuestion": "false"
+          },
+          {
+            "isParentQuestion": "false",
+            "question": "Herniation",
+            "questionId": "77941.1000043",
+            "options": [
+              {
+                "optionId": "77942.1000043",
+                "text": "No",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              },
+              {
+                "optionId": "77943.1000043",
+                "text": "Subfalcine",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              },
+              {
+                "optionId": "77944.1000043",
+                "text": "Transtentorial",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              }
+            ],
+            "maxSelections": 1,
+            "minSelections": 1,
+            "type": "SelectQuestion",
+            "minRepetitions": 1,
+            "maxRepetitions": 1,
+            "isRequired": true
+          },
+          {
+            "isParentQuestion": "false",
+            "question": "Hyperdense vessel?",
+            "questionId": "77945.1000043",
+            "options": [
+              {
+                "optionId": "77946.1000043",
+                "text": "Yes",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              },
+              {
+                "optionId": "77947.1000043",
+                "text": "No",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              }
+            ],
+            "maxSelections": 1,
+            "minSelections": 1,
+            "type": "SelectQuestion",
+            "minRepetitions": 1,
+            "maxRepetitions": 1,
+            "isRequired": true
+          },
+          {
+            "isParentQuestion": "false",
+            "question": "Hyperdense Sign",
+            "questionId": "77948.1000043",
+            "options": [
+              {
+                "optionId": "77949.1000043",
+                "text": "Middle cerebral",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              },
+              {
+                "optionId": "77950.1000043",
+                "text": "Anteriorcerebral",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              },
+              {
+                "optionId": "77951.1000043",
+                "text": "Intrasylvian cortical",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              },
+              {
+                "optionId": "77952.1000043",
+                "text": "Basilar artery",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              }
+            ],
+            "maxSelections": 1,
+            "minSelections": 1,
+            "type": "SelectQuestion",
+            "minRepetitions": 1,
+            "maxRepetitions": 1,
+            "isRequired": true
+          },
+          {
+            "isParentQuestion": "false",
+            "question": "Arterial calcification",
+            "questionId": "77953.1000043",
+            "options": [
+              {
+                "optionId": "77958.1000043",
+                "text": "Yes",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              },
+              {
+                "optionId": "77959.1000043",
+                "text": "No",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              }
+            ],
+            "maxSelections": 1,
+            "minSelections": 1,
+            "type": "SelectQuestion",
+            "minRepetitions": 1,
+            "maxRepetitions": 1,
+            "isRequired": true
+          },
+          {
+            "isParentQuestion": "false",
+            "question": "Venous thrombus",
+            "questionId": "77954.1000043",
+            "options": [
+              {
+                "optionId": "77960.1000043",
+                "text": "Yes",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              },
+              {
+                "optionId": "77961.1000043",
+                "text": "No",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              }
+            ],
+            "maxSelections": 1,
+            "minSelections": 1,
+            "type": "SelectQuestion",
+            "minRepetitions": 1,
+            "maxRepetitions": 1,
+            "isRequired": true
+          },
+          {
+            "isParentQuestion": "false",
+            "question": "Sinus location",
+            "questionId": "77955.1000043",
+            "options": [
+              {
+                "optionId": "77962.1000043",
+                "text": "Dural venous sinus",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              },
+              {
+                "optionId": "77963.1000043",
+                "text": "Cortical vein",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              }
+            ],
+            "maxSelections": 1,
+            "minSelections": 1,
+            "type": "SelectQuestion",
+            "minRepetitions": 1,
+            "maxRepetitions": 1,
+            "isRequired": true
+          },
+          {
+            "isParentQuestion": "false",
+            "question": "Hydrocephalus",
+            "questionId": "77956.1000043",
+            "options": [
+              {
+                "optionId": "77964.1000043",
+                "text": "No",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              },
+              {
+                "optionId": "77965.1000043",
+                "text": "Yes",
+                "isInitiallySelected": false,
+                "responseMode": "choice"
+              }
+            ],
+            "maxSelections": 1,
+            "minSelections": 1,
+            "type": "SelectQuestion",
+            "minRepetitions": 1,
+            "maxRepetitions": 1,
+            "isRequired": true
+          },
+          {
+            "question": "ASPECTS classification",
+            "questionId": "77957.1000043",
+            "type": "ResponseQuestion",
+            "minRepetitions": 1,
+            "maxRepetitions": 1,
+            "isRequired": true,
+            "responseType": "string",
+            "defaultValue": "",
+            "minLength": 0,
+            "maxLength": 80,
+            "isParentQuestion": "false"
+          }
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "Comment(s)",
+        "questionId": "76386.1000043",
+        "type": "ResponseQuestion",
+        "minRepetitions": 1,
+        "maxRepetitions": 1,
+        "isRequired": true,
+        "responseType": "string",
+        "defaultValue": "",
+        "minLength": 0,
+        "maxLength": 80,
+        "isParentQuestion": "false"
+      }
+    ]
+  },
+  "footer": {
+    "CopyrightFooter": "(c) 2018 College of American Pathologists.  All rights reserved.  License required for use."
+  },
+  "diagnosticProcedureId": "CT_Stroke_CCO.358"
+}

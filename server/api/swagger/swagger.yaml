@@ -1,0 +1,181 @@
+swagger: "2.0"
+info:
+  title: SDC API
+  version: 1.0.0
+host: localhost:5000
+basePath: /api/v1
+schemes:
+  - https
+paths:
+  /SDCForm:
+    get:
+      summary: Returns one or more SDCForms by ID. If a DiagnosticProcedureId is provided, this endpoint will will filter results on the given diagnostic.
+      parameters:
+        - in: query
+          name: SDCFormIds
+          required: true
+          type: array
+          items:
+            type: string
+        - in: query
+          name: DiagnosticProcedureId
+          required: false
+          type: string
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/SDCForms'
+        400:
+          description: Bad Request
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+        404:
+          description: Not Found
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+        500:
+          description: Internal Server Error
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+                
+    post:
+      summary: Parses an XML string which represents an SDCForm and stores a JSON representation of the SDC Form.
+      parameters:
+        - in: body
+          name: XMLData
+          required: true
+          schema:
+            type: object
+            properties:
+              XMLString:
+                type: string
+      responses:
+        201:
+          description: OK
+          schema:
+            $ref: '#/definitions/SDCForm'
+        400:
+          description: Bad Request
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+        500:
+          description: Internal Server Error
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+                
+    put:
+      summary: Creates a new version of the SDCForm correspoding to the given SDCFormId. Will parse the XML form to obtain new JSON representation.
+      parameters:
+        - in: query
+          name: SDCFormId
+          required: true
+          type: string
+        - in: query
+          name: XMLString
+          required: false
+          type: string
+      responses:
+        204:
+          description: OK
+          schema:
+            $ref: '#/definitions/SDCForm'
+        400:
+          description: Bad Request
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+        404:
+          description: Not Found
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+        500:
+          description: Internal Server Error
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+                
+                
+    delete:
+      summary: Deletes SDCForms corresponding to the SDCFormIds provided from the server.
+      parameters:
+        - in: query
+          name: SDCFormIds
+          required: true
+          type: array
+          items:
+            type: string
+      responses:
+        204:
+          description: OK
+        400:
+          description: Bad Request
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+        404:
+          description: Not Found
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+        500:
+          description: Internal Server Error
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+
+
+definitions:
+
+  SDCForms:
+    type: array
+    items:
+      $ref: '#/definitions/SDCForm'
+
+  SDCForm:
+    properties:
+      SDCFormId:
+        type: string
+      Version:
+        type: integer
+      DiagnosticProcedureId:
+        type: string
+      Title:
+        type: string
+      LastModified:
+        type: string
+    # All properties are required
+    required:  
+      - SDCFormId
+      - Version
+      - DiagnosticProcedureId
+      - Title
+      - LastModified

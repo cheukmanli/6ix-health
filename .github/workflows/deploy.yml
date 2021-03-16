@@ -1,0 +1,59 @@
+name: Continuous Integration and Deployment
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  test_build_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14
+
+      # Must be able to build using production dependencies for Heroku
+      - name: Server - Build using Production Dependencies
+        working-directory: server
+        run: |
+          npm ci --only=prod
+          npm run build
+
+      - name: Server - Install Dependencies
+        working-directory: server
+        run: npm i
+
+      - name: Server - Lint and Test
+        working-directory: server
+        run: |
+          npm run lint
+          npm test
+
+      - name: Client - Install Dependencies
+        working-directory: client
+        run: npm ci
+
+      - name: Client - Lint and Test
+        working-directory: client
+        run: |
+          npm run lint
+          npm test
+
+      - name: Client - Build
+        working-directory: client
+        run: npm run build
+
+      - name: Copy client/build folder to server/public
+        working-directory: server
+        run: |
+          rm -rf ./public
+          cp -r ../client/build ./public
+
+      - name: Deploy
+        uses: akhileshns/heroku-deploy@v3.6.8
+        with:
+          appdir: "server"
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
+          heroku_email: ${{secrets.HEROKU_APP_EMAIL}}
